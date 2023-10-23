@@ -82,7 +82,7 @@ We have a filesystem called test, mounted in my home directory.
 ```
 zfs list -r rpool/test
 NAME       USED  AVAIL  REFER  MOUNTPOINT
-rpool/test    96K  4.36T    96K  /home/mrunkel/test
+rpool/test    96K  4.36T    96K  /home/gentoober/test
 ```
 
 I create a snapshot of the filesystem.
@@ -97,14 +97,14 @@ rpool/test@demo                                                                 
 # Rollback a snapshot
 Now let's create a file in there.
 ```
-touch /home/mrunkel/test/afile.txt
-ls /home/mrunkel/test/
+touch /home/gentoober/test/afile.txt
+ls /home/gentoober/test/
 afile.txt
 ```
 Now let's rollback to the snapshot.
 ```
 zfs rollback rpool/test@demo
-ls /home/mrunkel/test/
+ls /home/gentoober/test/
 <nothing is shown>
 ```
 
