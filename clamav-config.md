@@ -1,5 +1,5 @@
-# try #1 edit sudoers
-
+# test no.1
+```
   security.sudo.extraConfig  =
   ''
      clamav ALL = (ALL) NOPASSWD: SETENV: /run/current-system/sw/bin/notify-send
@@ -15,4 +15,4 @@
     VirusEvent = "/etc/clamav/virus-event.bash";
     User = "clamav";
   };
-
+```
