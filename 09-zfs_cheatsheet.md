@@ -1,5 +1,40 @@
 # ZFS commands cheatsheet
 
+## ZFS CHEAT SHEET
+```
+zpool create myzfspool /dev/loop0
+```
+```
+zfs create -o compression=lz4 autotrim=on myzfspool/dataset1
+```
+```
+zfs set mountpoint=/mnt/zfs-mount zpool-0/data-0
+```
+```
+mount -t zfs zpool-0/data-0 /mnt/zfs-mount
+```
+```
+zpool remove zfspool /dev/mapper/gentoober-zfs
+```
+```
+zpool list zfspool
+```
+```
+zpool remove zfspool /dev/mapper/gentoober-zfs
+```
+```
+zpool create zpool0 /dev/mapper/gentoober-zfs
+```
+```
+zpool status zfspool
+```
+```
+zfs set compression=lz4 myzfspool/dataset1
+```
+```
+zfs get compression myzfspool/dataset1
+```
+
 ## Devices and Pools
 
 ### List all devices in the server
